@@ -1,0 +1,17 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    ffi (1.9.17)
+    rake (12.0.0)
+    rake-compiler (1.0.3)
+      rake
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  ffi (~> 1.9)
+  rake-compiler (~> 1.0)
+
+BUNDLED WITH
+   1.13.6
