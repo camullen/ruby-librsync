@@ -2,6 +2,7 @@
 source "https://rubygems.org"
 
 gem 'ffi', '~> 1.9'
+gem 'RubyInline'
 
 
 group :development, :test do
@@ -9,5 +10,4 @@ group :development, :test do
   gem 'pry'
   gem 'pry-byebug'
   gem 'rspec'
-  gem 'RubyInline'
 end
