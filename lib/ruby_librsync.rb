@@ -4,20 +4,20 @@ module RubyLibrsync
   extend FFI::Library
   ffi_lib File.expand_path('../librsync.dylib', __FILE__)
 
-  require './typedefs'
+  require_relative './typedefs'
 
   # Callbacks
   callback :rs_trace_fn_t, [:int, :string], :void
   callback :rs_copy_cb, [:pointer, :rs_long_t, :size_t_star, :pointer], :rs_result
 
   # Struct imports
-  require './structs/rs_mdfour'
-  require './structs/rs_stats'
-  require './structs/rs_mdfour'
-  require './structs/rs_stats'
-  require './structs/rs_signature'
-  require './structs/rs_job'
-  require './structs/rs_buffers_s'
+  require_relative './structs/rs_mdfour'
+  require_relative './structs/rs_stats'
+  require_relative './structs/rs_mdfour'
+  require_relative './structs/rs_stats'
+  require_relative './structs/rs_signature'
+  require_relative './structs/rs_job'
+  require_relative './structs/rs_buffers_s'
 
   # Needs RsJob pointer
   callback :rs_driven_cb, [RsJob.ptr, RsBuffersS.ptr, :pointer], :rs_result 

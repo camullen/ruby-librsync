@@ -8,6 +8,7 @@ require_relative './rs_stats'
 
 module RubyLibrsync
   class RsJob < FFI::Struct
+    C_TYPE = 'rs_job_t'
     layout :dogtag,               :int,
            :job_name,             :string,
            :stream,               RsBuffersS.ptr,

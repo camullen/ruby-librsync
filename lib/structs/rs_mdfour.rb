@@ -2,6 +2,7 @@ require 'ffi'
 
 module RubyLibrsync
   class RsMdfour < FFI::Struct
+    C_TYPE = 'rs_mdfour_t'
     layout :A,          :uint,
            :B,          :uint,
            :C,          :uint,

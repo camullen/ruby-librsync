@@ -5,6 +5,7 @@ require_relative './rs_target'
 
 module RubyLibrsync
   class RsSignature < FFI::Struct
+    C_TYPE = 'rs_signature_t'
     layout :flength,               :rs_long_t,
            :count,                 :int,
            :remainder,             :int,

@@ -2,6 +2,7 @@ require 'ffi'
 
 module RubyLibrsync
   class RsStats < FFI::Struct
+    C_TYPE = 'rs_stats_t'
     layout :op,             :pointer,
            :lit_cmds,       :int,
            :lit_bytes,      :rs_long_t,
