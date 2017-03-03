@@ -2,5 +2,5 @@
 	path = ext/librsync
 	url = https://github.com/librsync/librsync.git
 [submodule "ext/librsync/repo"]
-	path = ext/librsync/repo
+	path = ext/librsync
 	url = https://github.com/librsync/librsync.git
