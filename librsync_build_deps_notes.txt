@@ -1,0 +1,26 @@
+A C compiler and appropriate headers and libraries
+CMake
+Some build tool supported by CMake: Make is most common, Ninja is nicer.
+popt command line parsing library
+Doxygen - optional, to build docs
+BZip2
+Perl
+ZLib
+
+alloca.h 
+dlfcn.h 
+inttypes.h 
+memory.h 
+stdint.h 
+stdlib.h 
+strings.h 
+string.h 
+sys/stat.h
+sys/types.h
+unistd.h 
+bzlib.h 
+fcntl.h 
+malloc.h 
+mcheck.h 
+sys/file.h
+zlib.h 
