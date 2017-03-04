@@ -5,12 +5,14 @@ ENV CLANG_VERSION 3.9
 ENV GCC_VERSION 5
 ENV XAR_VERSION 1.6.1
 ENV MINGW_W64_VERSION 5.0.1
+ENV RUBY_VERSION 2.4.0
 
 
 
 RUN apt-get update && \
+    apt-get install -y --no-install-recommends --no-install-suggests apt-utils && \
+    apt-get update && \
     apt-get install -y --no-install-recommends --no-install-suggests \
-      apt-utils \
       autoconf \
       autogen \
       automake \
@@ -19,7 +21,6 @@ RUN apt-get update && \
       bison \
       bzip2 \
       ca-certificates \
-      clang-$CLANG_VERSION \
       cmake \
       curl \
       doxygen \
@@ -28,16 +29,15 @@ RUN apt-get update && \
       fuse \
       g++-$GCC_VERSION \
       gcc-$GCC_VERSION \
+      gobjc++-$GCC_VERSION \
       git \
       gnupg \
-      gobjc++-$GCC_VERSION \
+      gobjc \
       gperf \
       gzip \
       lbzip2 \
       libbz2-dev \
       libc6-dev \
-      libclang-common-$CLANG_VERSION-dev \
-      libclang-$CLANG_VERSION-dev \
       libcloog-ppl-dev \
       libcrypto++-dev \
       libgmp-dev \
@@ -48,26 +48,45 @@ RUN apt-get update && \
       libssl-dev \
       libtool \
       libxml2-dev \
+      llvm-$CLANG_VERSION \
       liblldb-$CLANG_VERSION \
       liblldb-$CLANG_VERSION-dbg \
       liblldb-$CLANG_VERSION-dev \
       lldb-$CLANG_VERSION \
-      llvm-$CLANG_VERSION \
       llvm-$CLANG_VERSION-dev \
+      libclang-$CLANG_VERSION-dev \
+      libclang-common-$CLANG_VERSION-dev \
+      clang-$CLANG_VERSION \
       make \
-      openjdk-8-jdk-headless \
       patch \
       perl \
       ppl-dev \
-      python \
       python-software-properties \
-      python3 \
+      ruby \
       software-properties-common \
       tar \
       uuid-dev \
       wget \
       zlib1g-dev
 
+
+# RUN update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-$GCC_VERSION 20 && \
+    # update-alternatives --install /usr/bin/gcc-ar gcc-ar /usr/bin/gcc-ar-$GCC_VERSION 20 && \
+    # update-alternatives --install /usr/bin/gcc-nm gcc-nm /usr/bin/gcc-nm-$GCC_VERSION 20 && \
+    # update-alternatives --install /usr/bin/gcc-ranlib gcc-ranlib /usr/bin/gcc-ranlib-$GCC_VERSION 20 && \
+    # update-alternatives --install /usr/bin/gcov gcov /usr/bin/gcov-$GCC_VERSION 20 && \
+    # update-alternatives --install /usr/bin/gcov-tool gcov-tool /usr/bin/gcov-tool-$GCC_VERSION 20 && \
+
+    # update-alternatives --install /usr/bin/clang++ clang++ /usr/bin/clang++-$CLANG_VERSION && \
+    # update-alternatives --install /usr/bin/clang clang /usr/bin/clang-$CLANG_VERSION && \
+    # update-alternatives --install /usr/bin/clang-apply-replacements clang-apply-replacements /usr/bin/clang-apply-replacements-$CLANG_VERSION && \
+    # update-alternatives --install /usr/bin/clang-check clang-check /usr/bin/clang-check-$CLANG_VERSION && \
+    # update-alternatives --install /usr/bin/clang-cl clang-cl /usr/bin/clang-cl-$CLANG_VERSION && \
+    # update-alternatives --install /usr/bin/clang-query clang-query /usr/bin/clang-query-$CLANG_VERSION && \
+    # update-alternatives --install /usr/bin/clang-rename clang-rename /usr/bin/clang-rename-$CLANG_VERSION && \
+    # update-alternatives --install /usr/bin/clang-tblgen clang-tblgen /usr/bin/clang-tblgen-$CLANG_VERSION && \
+
+    
 
 #RUN mkdir -p /tmp/xar && \
 #    cd /tmp/xar && \
