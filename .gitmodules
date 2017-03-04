@@ -1,6 +1,4 @@
-[submodule "ext/librsync"]
-	path = ext/librsync
-	url = https://github.com/librsync/librsync.git
-[submodule "ext/librsync/repo"]
-	path = ext/librsync
+
+[submodule "ext/librsync/librsync-src"]
+	path = ext/librsync/librsync-src
 	url = https://github.com/librsync/librsync.git
