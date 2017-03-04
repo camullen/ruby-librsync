@@ -10,6 +10,8 @@
 /test/version_tmp/
 /tmp/
 *.dylib
+rsync.sh
+.Dockerfile.swp
 
 # Used by dotenv library to load environment variables.
 # .env
